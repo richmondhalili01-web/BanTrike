@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanTrike — Sign In</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="auth-shell">
+    <div class="auth-card">
+
+      <div class="auth-logo">BanTrike</div>
+      <p class="auth-tagline">Register, renew, and check the roadworthiness of your tricycle — all in one place.</p>
+
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" id="tab-login">Log In</button>
+        <button type="button" class="auth-tab" id="tab-signup">Sign Up</button>
+      </div>
+
+      <div id="banner"></div>
+
+      <form id="login-form">
+        <div class="field">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" required>
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required>
+        </div>
+        <button type="submit" class="btn btn-block">Log In</button>
+      </form>
+
+      <form id="signup-form" style="display:none;">
+        <div class="field">
+          <label for="signup-fullname">Full name</label>
+          <input type="text" id="signup-fullname" required>
+        </div>
+        <div class="field">
+          <label for="signup-username">Choose a username</label>
+          <input type="text" id="signup-username" required>
+        </div>
+        <div class="field">
+          <label for="signup-password">Choose a password</label>
+          <input type="password" id="signup-password" required>
+        </div>
+        <button type="submit" class="btn btn-block">Create Account</button>
+      </form>
+
+      <p class="auth-demo">
+        Just want to look around?<br>
+        Driver: <code>demo</code> / <code>demo</code> &nbsp;·&nbsp; Admin: <code>admin</code> / <code>admin123</code>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

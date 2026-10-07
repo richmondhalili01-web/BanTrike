@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanTrike — Renewal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="dashboard.html" class="logo">BanTrike</a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="renewal.html" class="active">Renewal</a></li>
+        <li><a href="roadworthy.html">Roadworthiness Standard</a></li>
+        <li id="admin-nav-slot"></li>
+      </ul>
+    </nav>
+    <a href="profile.html" class="profile-link"><span id="nav-username">...</span></a>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Renew your registration</h1>
+      <p>Renewal requires a passing roadworthiness check from within the last 60 days — this keeps units on the road actually roadworthy, not just paid-up.</p>
+    </div>
+
+    <div id="no-unit-notice" style="display:none;" class="banner banner-warning">
+      You need to <a href="registration.html" style="text-decoration:underline;">register a tricycle</a> first.
+    </div>
+
+    <div id="content" class="card" style="max-width:600px; display:none;">
+      <h3 id="unit-heading">Your unit</h3>
+      <div class="detail-grid" style="margin-bottom:10px;">
+        <div><div class="label">BanTrike ID</div><div class="value" id="d-id">–</div></div>
+        <div><div class="label">Status</div><div class="value" id="d-status">–</div></div>
+        <div><div class="label">Expires on</div><div class="value" id="d-expiry">–</div></div>
+        <div><div class="label">Roadworthiness</div><div class="value" id="d-roadworthy">–</div></div>
+      </div>
+
+      <div id="gate-message"></div>
+
+      <button id="renew-btn" class="btn btn-block" style="margin-top:16px;">Renew Now</button>
+      <a id="check-link" href="roadworthy.html" class="btn btn-outline btn-block" style="margin-top:12px; display:none;">Go to Roadworthiness Check</a>
+    </div>
+  </main>
+
+  <footer>BanTrike — register, renew, and check your tricycle's roadworthiness.</footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/renew.js"></script>
+</body>
+</html>

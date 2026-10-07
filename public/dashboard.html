@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanTrike — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="dashboard.html" class="logo">BanTrike</a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="renewal.html">Renewal</a></li>
+        <li><a href="roadworthy.html">Roadworthiness Standard</a></li>
+        <li id="admin-nav-slot"></li>
+      </ul>
+    </nav>
+    <a href="profile.html" class="profile-link"><span id="nav-username">...</span></a>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1 id="welcome-heading">Welcome back.</h1>
+      <p>Here's the current status of your registered unit.</p>
+    </div>
+
+    <div id="no-unit-notice" style="display:none;" class="banner banner-warning">
+      You haven't registered a tricycle yet. <a href="registration.html" style="text-decoration:underline;">Register one now</a> to get your BanTrike ID.
+    </div>
+
+    <div class="grid-3" id="status-tiles" style="display:none; margin-bottom:30px;">
+      <div class="stat-tile"><div class="label">Registration status</div><div class="value" id="tile-status">–</div></div>
+      <div class="stat-tile"><div class="label">Roadworthiness</div><div class="value" id="tile-roadworthy">–</div></div>
+      <div class="stat-tile"><div class="label">Expires on</div><div class="value" id="tile-expiry">–</div></div>
+    </div>
+
+    <h2 style="margin-bottom:14px;">Features</h2>
+    <div class="feature-grid" id="feature-grid"></div>
+  </main>
+
+  <footer>BanTrike — register, renew, and check your tricycle's roadworthiness.</footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanTrike — Roadworthiness Standard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="dashboard.html" class="logo">BanTrike</a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="renewal.html">Renewal</a></li>
+        <li><a href="roadworthy.html" class="active">Roadworthiness Standard</a></li>
+        <li id="admin-nav-slot"></li>
+      </ul>
+    </nav>
+    <a href="profile.html" class="profile-link"><span id="nav-username">...</span></a>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Check your tricycle's roadworthiness</h1>
+      <p>Tick everything that applies to your unit, then run the check. A passing result is required before you can renew — and it must be less than 60 days old.</p>
+    </div>
+
+    <div id="no-unit-notice" style="display:none;" class="banner banner-warning">
+      You need to <a href="registration.html" style="text-decoration:underline;">register a tricycle</a> before you can run a roadworthiness check.
+    </div>
+
+    <div class="card" id="checklist-card" style="max-width:640px;">
+      <ul class="checklist">
+        <li><input type="checkbox" id="headlights"><label for="headlights">Headlights and taillights working</label></li>
+        <li><input type="checkbox" id="brakes"><label for="brakes">Brakes working properly</label></li>
+        <li><input type="checkbox" id="horn"><label for="horn">Horn working</label></li>
+        <li><input type="checkbox" id="mirrors"><label for="mirrors">Side mirrors installed</label></li>
+        <li><input type="checkbox" id="tires"><label for="tires">Tires have good tread, no bald spots</label></li>
+        <li><input type="checkbox" id="muffler"><label for="muffler">Muffler / exhaust noise within standard</label></li>
+        <li><input type="checkbox" id="plateVisible"><label for="plateVisible">Number plate clean and clearly visible</label></li>
+        <li><input type="checkbox" id="sidecar"><label for="sidecar">Sidecar frame and seating secure</label></li>
+      </ul>
+      <button id="check-btn" class="btn btn-block">Run Roadworthiness Check</button>
+      <div id="result"></div>
+    </div>
+  </main>
+
+  <footer>BanTrike — register, renew, and check your tricycle's roadworthiness.</footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/roadworthy.js"></script>
+</body>
+</html>

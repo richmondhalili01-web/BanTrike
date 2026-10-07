@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanTrike Admin — Fleet Monitoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar navbar-admin">
+    <a href="admin.html" class="logo"> BanTrike <span class="admin-tag">Admin</span></a>
+    <nav class="nav-links">
+      <ul><li><a href="admin.html" class="active">Fleet Monitoring</a></li></ul>
+    </nav>
+    <button class="btn btn-admin btn-sm" id="logout-btn">Log Out</button>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Fleet Monitoring</h1>
+      <p>Every registered tricycle, its renewal status, and its roadworthiness standing — so renewals that shouldn't go through, don't.</p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:10px;">
+      <div class="stat-tile"><div class="label">Total registered units</div><div class="value" id="s-total">–</div></div>
+      <div class="stat-tile"><div class="label">Active registrations</div><div class="value" id="s-active">–</div></div>
+      <div class="stat-tile"><div class="label">Needs attention</div><div class="value" id="s-attention">–</div></div>
+    </div>
+    <p class="hint" style="color:var(--ink-soft); font-size:0.85rem; margin-bottom:26px;" id="attention-explainer"></p>
+
+    <div class="card" style="margin-bottom:26px;">
+      <div class="field" style="max-width:280px; margin-bottom:0;">
+        <label for="filter-select">Filter</label>
+        <select id="filter-select">
+          <option value="">All units</option>
+          <option value="expired">Expired registration</option>
+          <option value="attention">Needs attention (roadworthiness)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card table-wrap" style="margin-bottom:30px;">
+      <table>
+        <thead>
+          <tr><th>BanTrike ID</th><th>Owner</th><th>Plate</th><th>Registration</th><th>Roadworthiness</th><th>Last Inspection</th><th>Expires</th><th></th></tr>
+        </thead>
+        <tbody id="fleet-body"></tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-bottom:14px;">Admin activity log</h2>
+    <div class="card" id="log-list"></div>
+  </main>
+
+  <footer>BanTrike Admin — fleet monitoring and renewal oversight.</footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

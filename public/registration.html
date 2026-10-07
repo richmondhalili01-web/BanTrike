@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanTrike — Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="dashboard.html" class="logo">BanTrike</a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="registration.html" class="active">Registration</a></li>
+        <li><a href="renewal.html">Renewal</a></li>
+        <li><a href="roadworthy.html">Roadworthiness Standard</a></li>
+        <li id="admin-nav-slot"></li>
+      </ul>
+    </nav>
+    <a href="profile.html" class="profile-link"><span id="nav-username">...</span></a>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Register your tricycle</h1>
+      <p>One account, one unit. Fill this out once to get your own BanTrike ID.</p>
+    </div>
+
+    <div id="already-registered" style="display:none;" class="banner banner-warning">
+      You already have a registered unit: <strong id="existing-id"></strong>.
+      Visit your <a href="profile.html" style="text-decoration:underline;">Profile</a> to view it.
+    </div>
+
+    <form id="register-form" class="card" style="max-width:560px;">
+      <div class="field">
+        <label for="plateNumber">Plate / body number</label>
+        <input type="text" id="plateNumber" required>
+      </div>
+      <div class="field">
+        <label for="tricycleModel">Tricycle make / model</label>
+        <input type="text" id="tricycleModel">
+      </div>
+      <div class="field">
+        <label for="address">Complete address</label>
+        <input type="text" id="address">
+      </div>
+      <div class="field">
+        <label for="contactNumber">Contact number</label>
+        <input type="text" id="contactNumber" required placeholder="09XX-XXX-XXXX">
+      </div>
+      <button type="submit" class="btn btn-block">Register Tricycle</button>
+      <div id="result"></div>
+    </form>
+  </main>
+
+  <footer>BanTrike — register, renew, and check your tricycle's roadworthiness.</footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
